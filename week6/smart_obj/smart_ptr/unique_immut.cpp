@@ -62,6 +62,7 @@ Object* unique_immut::operator->() {
 }
 
 unique_immut& unique_immut::operator=(unique_immut& r) {
+	if (this->_mgr == r._mgr) return *this;
 	this->release();
 	this->_mgr = r._mgr;
 	return *this;
