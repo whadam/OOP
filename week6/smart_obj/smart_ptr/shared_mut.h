@@ -12,19 +12,20 @@ private:
 public:
     shared_mut();
     explicit shared_mut(Object* obj);
+	shared_mut(const shared_mut& r);
     ~shared_mut();
 
     Object* get() const;
     void release();
     int count();
 
-    shared_mut operator+(const shared_mut &shared);
-    shared_mut operator-(const shared_mut &shared);
-    shared_mut operator*(const shared_mut &shared);
-    shared_mut operator/(const shared_mut &shared);
+	shared_mut operator+(const shared_mut& shared);
+	shared_mut operator-(const shared_mut& shared);
+	shared_mut operator*(const shared_mut& shared);
+	shared_mut operator/(const shared_mut& shared);
     Object* operator->();
 
-    shared_mut&operator=(const shared_mut &r);
+	shared_mut& operator=(const shared_mut& r);
 }; // end of class shared_mut
 } // end of namespace ptr
 

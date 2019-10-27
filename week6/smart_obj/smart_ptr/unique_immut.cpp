@@ -14,6 +14,9 @@ unique_immut::unique_immut(const unique_immut &immut) {
         int val = immut._mgr->ptr->get();
         _mgr = new mgr(val);
     }
+	else { //
+		_mgr = new mgr();
+	}
 }
 
 unique_immut::~unique_immut() {
@@ -62,7 +65,6 @@ Object* unique_immut::operator->() {
 }
 
 unique_immut& unique_immut::operator=(unique_immut& r) {
-	if (this->_mgr == r._mgr) return *this;
 	this->release();
 	this->_mgr = r._mgr;
 	return *this;

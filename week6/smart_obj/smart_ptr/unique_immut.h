@@ -16,13 +16,13 @@ public:
     Object* get() const;
     void release();
 
-    unique_immut operator+(unique_immut &unique);
-    unique_immut operator-(unique_immut &unique);
-    unique_immut operator*(unique_immut &unique);
-    unique_immut operator/(unique_immut &unique);
+	unique_immut operator+(unique_immut& unique);
+	unique_immut operator-(unique_immut& unique);
+	unique_immut operator*(unique_immut& unique);
+	unique_immut operator/(unique_immut& unique);
     Object* operator->();
 
-    unique_immut&operator=(unique_immut& r);
+	unique_immut& operator=(unique_immut& r);
 }; // end of class unique_immut
 } // end of namespace ptr
 

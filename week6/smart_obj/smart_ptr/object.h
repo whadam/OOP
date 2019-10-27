@@ -11,7 +11,7 @@ public:
     explicit Object(int _val);
     ~Object();
 
-    int get() const;
+	int get() const;
 
     Object operator+(const Object &obj);
     Object operator-(const Object &obj);
