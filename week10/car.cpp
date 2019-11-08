@@ -1,7 +1,7 @@
 #include "car.h"
 
 car::car() {
-
+	
 }
 
 car::car(int wheel_number, int max_speed) {

@@ -107,7 +107,7 @@ int test_shared1() {
 
 int test_shared2() {
     shared_ref a(new student(201950219));
-    shared_ref b(new student("B"));
+	shared_ref b(new student("B"));
 
     int result = 1;
     if (a.get() == nullptr || a->get_name() != nullptr) {
@@ -142,6 +142,7 @@ int test_shared3() {
     shared_ref b(new student(201950221));
     shared_ref c = b;
 
+	
     int result = 1;
     if (a.get() == nullptr || a->get_student_id() != 201950219) {
         result = 0;
@@ -268,6 +269,7 @@ int test_shared8() {
 
     int result = 1;
     shared_ref c = b;
+	cout << c.count() << endl;
     c.release();
     if (c.count() != 0) {
         result = 0;
@@ -357,6 +359,7 @@ int test_weak2() {
     shared_ref a(new student(201950219));
     int result = 1;
     weak_pointer b(a);
+	
     if (b.is_expired()) {
         result = 0;
         std::string str("test_weak2: Error is b.is_expired()");
@@ -431,23 +434,23 @@ int test_weak4() {
 }
 
 void init() {
-    vec.push_back(test_student1);
-    vec.push_back(test_student2);
+    vec.push_back(test_student1);	// 0
+    vec.push_back(test_student2);	// 1
 
-    vec.push_back(test_shared1);
-    vec.push_back(test_shared2);
-    vec.push_back(test_shared3);
-    vec.push_back(test_shared4);
-    vec.push_back(test_shared5);
-    vec.push_back(test_shared6);
-    vec.push_back(test_shared7);
-    vec.push_back(test_shared8);
-    vec.push_back(test_shared9);
+    vec.push_back(test_shared1);	// 2
+    vec.push_back(test_shared2);	// 3
+    vec.push_back(test_shared3);	// 4
+    vec.push_back(test_shared4);	// 5
+    vec.push_back(test_shared5);	// 6
+    vec.push_back(test_shared6);	// 7
+    vec.push_back(test_shared7);	// 8
+    vec.push_back(test_shared8);	// 9
+    vec.push_back(test_shared9);	// 10
 
-    vec.push_back(test_weak1);
-    vec.push_back(test_weak2);
-    vec.push_back(test_weak3);
-    vec.push_back(test_weak4);
+    vec.push_back(test_weak1);		// 11
+    vec.push_back(test_weak2);		// 12
+    vec.push_back(test_weak3);		// 13
+    vec.push_back(test_weak4);		// 14
 }
 
 int test_all() {
