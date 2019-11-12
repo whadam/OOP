@@ -12,12 +12,5 @@ public:
 
 	char* get_car_name();
 	const char* get_class_name();
-	int get_wheel_number();
-	int get_max_speed();
-	bool get_has_name();
-
 	void set_car_name(char* name);
-	void set_wheel_number(int number);
-	void set_max_speed(int speed);
-	void set_has_name(bool name);
 };

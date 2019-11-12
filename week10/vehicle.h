@@ -12,7 +12,7 @@ public:
 	vehicle();
 	vehicle(int wheel_number, int max_speed);
 	vehicle(int wheel_number, int max_speed, bool has_name);
-
+		
 	virtual int get_wheel_number();
 	virtual int get_max_speed();
 	virtual bool get_has_name();

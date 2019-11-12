@@ -30,31 +30,6 @@ const char* car::get_class_name() {
 	return "car";
 }
 
-int car::get_wheel_number() {
-	return this->wheel_number;
-}
-
-int car::get_max_speed() {
-	return this->max_speed;
-}
-
-bool car::get_has_name() {
-	return this->has_name;
-}
-
 void car::set_car_name(char* name) {
 	this->car_name = name;
 }
-
-void car::set_wheel_number(int number) {
-	this->wheel_number = number;
-}
-
-void car::set_max_speed(int speed) {
-	this->max_speed = speed;
-}
-
-void car::set_has_name(bool name) {
-	this->has_name = name;
-}
-
