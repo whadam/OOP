@@ -27,15 +27,15 @@ int weak_pointer::is_expired() {
     // 아닐 경우 0 리턴
 	if (ptr_map.find(this->ptr) == ptr_map.end()) {
 		// ptr not found
-		return 0;
+		return 1;
 	}
 	else {
 		// ptr found
 		if (ptr_map.find(this->ptr)->second != nullptr) {
-			return 1;
+			return 0;
 		}
 		else {
-			return 0;
+			return 1;
 		}
 	}
 }
