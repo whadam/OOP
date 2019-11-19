@@ -104,7 +104,7 @@ Number *Float::div(Number *num) {
 			cout << "div zero" << endl;
 			return this;
 		}
-		this->set_val(this->value + num_f->val());
+		this->set_val(this->value / num_f->val());
 		delete num_f;
 		return this;
 	} else if (num->types() == COMPLEX) {
